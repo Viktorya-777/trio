@@ -1,0 +1,117 @@
+.form {
+  width: 1000px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin:auto;
+  gap: 50px;
+  padding-bottom: 80px;
+}
+
+.form__info {
+  flex: 1;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title {
+  font-size: 2em;
+  background: linear-gradient(135deg, #000000 20%, #dbbba2 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0.3em 0.6em ;
+  border: 3px solid transparent;
+  border-image: linear-gradient(135deg, #000000 20%, #dbbba2 70%);
+  border-image-slice: 1;
+
+
+}
+
+.form__description {
+  font-size: 18px;
+  line-height: 135%;
+  color: #616161;
+}
+
+.form__contacts {
+}
+
+.form__contacts-title {
+  font-size: 20px;
+  line-height: 135%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 20px;
+}
+
+.form__contacts-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form__contacts-part {
+
+}
+
+.form__contact-icon {
+
+}
+
+.form__contact-content {
+  font-size: 14px;
+  line-height: 135%;
+  color: #000000;
+}
+
+.form__tag {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.form__send {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #dbbba2 inset, 0 0 0 0 #dbbba2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  transition: .15s ease-in-out;
+}
+
+.form__send:hover {
+  box-shadow: 0 0 10px 0 #dbbba2 inset, 0 0 10px 4px #9e6b44;
+  color: #dbbba2;
+}
+
+
+.form__field {
+  font-size: 18px;
+  line-height: 135%;
+  color: #775757;
+  outline: none;
+  border: 0;
+  /* padding: 10px 0px; */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D0D0D0;
+}
+
+.form__teaxtarea{
+  padding: 10px;
+  margin-top: 20px;
+  resize: none;
+  font-size: 18px;
+  line-height: 135%;
+  color: #835353;
+}

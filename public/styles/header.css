@@ -1,0 +1,19 @@
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo-container {
+  padding-left: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header__logo{
+  height: 225px;
+}
+
+.header__navigation {
+  width: 1000px;
+}

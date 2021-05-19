@@ -1,0 +1,122 @@
+.works {
+  padding-top: 80px;
+  width: 1000px;
+  height: 1000px;
+  overflow: hidden;
+  display: grid;
+  align-content: stretch;
+  justify-items: stretch;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  margin: auto;
+  grid-gap: 20px;
+  /* Сетка задается шаблоном, буква - соответствует значение стиля картинки в html */
+  grid-template-areas: "a a b b b b c c c"  
+                       "a a b b b b c c c"
+                       "a a b b b b c c c"  
+                       "d d d d d e e e e"  
+                       "d d d d d e e e e"  
+                       "d d d d d e e e e"  
+                       "d d d d d f f f f"  
+                       "d d d d d f f f f"  
+                       "d d d d d f f f f";
+}
+
+.works__meta {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.works__meta-title {
+  font-size: 24px;
+  line-height: 150%;
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 10px;
+  letter-spacing: 0.2em;
+  border: 1px solid;
+  border-image: linear-gradient(20deg,  #000000 38%, #dbbba2 65%);
+  border-image-slice: 1;
+}
+
+.works__meta-img {
+  /* height: 50%;     */
+  width: 100%;
+  object-fit: cover;
+}
+
+.works__grid-cell{
+  width: auto;
+  height: auto;
+  
+}
+
+.works__gallery-image--selected {
+  /* Выбранную картинку нужно фиксировано спозиционировать по центру экрана */
+  position: fixed;
+  top: 50%; /* Отступ сверху - 50% высоты окна */
+  left: 50%; /* Отступ слева - 50% ширины экрана */
+  transform: translate(-50%, -50%); /* Далее нужно отступить в обратну сторону на половину ширины и высоты самого блока */
+  padding: 50px; /* Отступы вокруг картинки (что б не на весь экран) */
+  box-sizing: border-box;
+  z-index: 2; /* И выводим её на передний план, чтоб затемненный фон не перекрывал */
+}
+
+.works__gallery-image--selected > img {
+  object-fit: contain !important; /* У выбранной картинки переопределяем стратегию заполнения 
+  картинкой блока, !important задает максимальный приоритет */
+}
+
+.works__gallery-image--selected:after{
+  /* Крестик реализован через псевдоэлемент after */
+  content: 'x'; /* Сам крестик */
+  font-size: 35px;
+  font-weight: 500;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.5);
+  /* transform: translate(100%, -100%); */
+  cursor: pointer;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  position: fixed;
+  /* right: 0; */
+  right: 20px; /* Отображаем в правом верхнем углу страницы с небольшим отступом*/
+  top: 20px;
+  color: white;
+}
+
+.works__gallery-image--selected:before { /* Это полупрозрачный затемняющий фон, который видно только у активной картинки*/
+  content: ""; /* Без свойства content элемент не отобразится*/
+  width: 100vw; /* Полная ширина окна */
+  height: 100vh; /* Полная высотка окна */
+  top: 0; /* Без отступов */
+  left: 0;
+  background-color: rgba(0,0,0,.7);
+  z-index: -1; /* Отправляем на задний план */
+  position: fixed;
+}
+
+.works__gallery-image{
+  width: 100%;
+  height: 100%;
+
+  
+} 
+
+.works__gallery-image > img {
+  height: 100%;    
+  width: 100%;    
+  object-fit: cover;
+  cursor: pointer;
+} 

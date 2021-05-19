@@ -1,0 +1,32 @@
+.service {
+  padding-top: 50px;
+}
+
+.service__title {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 2em;
+  background: linear-gradient(135deg, #000000 20%, #dbbba2 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service__content {
+  margin: 0px 0px;
+  padding-top: 30px;
+}
+
+.service__content-part {
+  
+}
+
+.service__tabs {
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.service__tab{
+  margin: 0px 20px;
+  flex: 1;
+}

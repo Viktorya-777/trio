@@ -1,0 +1,22 @@
+.footer {
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__copyright {
+  padding: 20px;
+  letter-spacing: 0.2em;
+  border: 1px solid;
+  border-image: linear-gradient(20deg,  #000000 38%, #dbbba2 65%);
+  border-image-slice: 1;
+}
+
+.footer__autor {
+  padding: 20px;
+  letter-spacing: 0.2em;
+  border: 1px solid;
+  border-image: linear-gradient(20deg, #dbbba2 38%, #000000 65%);
+  border-image-slice: 1;
+}

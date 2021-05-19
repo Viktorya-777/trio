@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="public/styles/index.css" >
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link href="public/img/logo.ico" type="image/x-icon" rel="shortcut icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+    
+
+    <script src="public/script.js"></script>
+    <script type="text/javascript">
+      window.onload = () => {
+        initTabs()
+        initGallery()
+        initForm()
+      }
+    </script>
+  </head>
+	<body>
+
+    <!-- HEADER START-->
+		<header class="header">
+      <div class="header__logo-container">
+        <img
+          src="public/img/logo.png"
+          class="header__logo"
+        />
+      </div>
+
+      <!-- NAVIGATION START -->
+      <nav class="navigation header__navigation">
+        <ul class="navigation__list">
+          <!---->
+          <li class="navigation__element navigation__element--active">
+            <a class="navigation__link" href="#banner">
+              Главная
+            </a>
+          </li>
+          <!---->
+          <li class="navigation__elementt">
+            <a href="#service" class="navigation__link">
+              Услуги/цены
+            </a>
+          </li>
+          <!---->
+          <li class="navigation__element">
+            <a href="#works" class="navigation__link">
+              Наши работы
+            </a>
+          </li>
+          <!---->
+          <li class="navigation__element">
+            <a href="#atmosphere" class="navigation__link">
+              Атмосфера салона
+            </a>
+          </li>
+          <!---->
+          <li class="navigation__element">
+            <a href="#form-section" class="navigation__link">
+              Онлайн запись
+            </a>
+          </li>
+          <!---->
+        </ul>
+      </nav>
+      <!-- NAVIGATION END -->
+      
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <main class="main">
+
+      <!-- BANNER START -->
+      <article id="banner" class="banner">
+        <span></span>
+        <div class="banner__action-button-container">
+          <a class="banner__action-button" href="#form-section">
+            Записаться
+          </a>
+        </div>
+      </article>
+      <!-- BANNER END -->
+
+      <!-- SERVICE START -->
+      <article id="service" class="service">
+        <h2 class="service__title">
+          Услуги и цены
+        </h2>
+        <ul class="service__tabs">
+          <!---->
+          <li class="service__tab" data-target="cosmetology">
+            <!-- SERVICE CARD START-->
+            <article class="service-card service-card--active service-card--cosmetology">
+              <div class="service-card__info-container">
+                <section class="service-card__info">
+                  <h3 class="service-card__title">
+                    Косметология
+                  </h3>
+                  <p class="service-card__description">
+                    Не красота вызывает любовь, а любовь заставляет нас видеть красоту.
+                  </p>
+                </section>
+              </div>
+            </article>
+          </li>
+          <li class="service__tab" data-target="nails">
+            <!-- SERVICE CARD START-->
+            <article class="service-card service-card--nails">
+              <div class="service-card__info-container">
+                <section class="service-card__info">
+                  <h3 class="service-card__title">
+                    Маникюр
+                  </h3>
+                  <p class="service-card__description">
+                    Иногда самая срочная я важная вещь,
+                    которую надо сделать - это хорошенько отдохнуть
+                  </p>
+                </section>
+              </div>
+            </article>
+          </li>
+          <!---->
+          <li class="service__tab" data-target="massage">
+            <!-- SERVICE CARD START-->
+            <article class="service-card service-card--massage">
+              <div class="service-card__info-container">
+                <section class="service-card__info">
+                  <h3 class="service-card__title">
+                    Массаж
+                  </h3>
+                  <p class="service-card__description">
+                    Иногда самая срочная и важная вещь, которую надо сделать, — это хорошенько отдохнуть.
+                  </p>
+                </section>
+              </div>
+            </article>
+          </li>
+          <!---->
+        </ul>
+        <ul class="service__content">
+          <li class="service__content-part" id="cosmetology">
+            <!-- PRICE LIST START-->
+            <article class="price-list price-list--visible">
+                <ul class="price-list__column">
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Перманентный макияж (Ведущий мастер)
+                      </span>
+                      <span class="price-list__cost">
+                        12 000
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Брови/Губы
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Перманентный макияж (Ведущий мастер)
+                      </span>
+                      <span class="price-list__cost">
+                        10 000
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Межресничное пространство
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Коррекция ПМ (Любая зона)
+                      </span>
+                      <span class="price-list__cost">
+                        50 % от первичной процедуры
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      В течение 1-3 месяцев
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Лазерное удаление татуажа
+                      </span>
+                      <span class="price-list__cost">
+                        2 000
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Каждый последующий сеанс
+                    </span>
+                  </li>
+                </ul>
+                <ul class="price-list__column">
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Коррекция бровей
+                      </span>
+                      <span class="price-list__cost">
+                        900
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Пинцентом, нитью или воском
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Окрашивание бровей
+                      </span>
+                      <span class="price-list__cost">
+                        1 000
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Хной или краской
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Макияж вечерний
+                      </span>
+                      <span class="price-list__cost">
+                        2 800
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Ресницы пучки входят в стоимость
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Мужской макияж
+                      </span>
+                      <span class="price-list__cost">
+                        900
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <!---->
+          <li class="service__content-part" id="nails">
+            <!-- PRICE LIST START-->
+            <article class="price-list">
+                <ul class="price-list__column">
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Маникюр женский
+                      </span>
+                      <span class="price-list__cost">
+                        900
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Аппаратный или комбинированный
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Маникюр мужской
+                      </span>
+                      <span class="price-list__cost">
+                        1100
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Аппаратный или комбинированный
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Покрытие гель-лак
+                      </span>
+                      <span class="price-list__cost">
+                        1200
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Маникюр+гель-лак
+                      </span>
+                      <span class="price-list__cost">
+                        2100
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Снятие бесплатно (если делали у нас)
+                    </span>
+                  </li>
+                </ul>
+                <ul class="price-list__column">
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Дизайн 1 ногти
+                      </span>
+                      <span class="price-list__cost">
+                        от 50
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Снятие гель-лака
+                      </span>
+                      <span class="price-list__cost">
+                        300
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      С последующим покрытием
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Ремонт ногтя
+                      </span>
+                      <span class="price-list__cost">
+                        100
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Укрепление полигелем
+                      </span>
+                      <span class="price-list__cost">
+                        550
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <!---->
+          <li class="service__content-part" id="massage">
+            <!-- PRICE LIST START-->
+            <article class="price-list">
+                <ul class="price-list__column">
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Лимфодренажный массаж
+                      </span>
+                      <span class="price-list__cost">
+                        2 500
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      60 мин.
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Массаж 20 мин
+                      </span>
+                      <span class="price-list__cost">
+                        1 000
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      На выбор: стопы, шейно-воротниковая зона или спина
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Пилинг+обертывание
+                      </span>
+                      <span class="price-list__cost">
+                        900
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Дополнительно к массажу
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Антицеллюлитный массаж
+                      </span>
+                      <span class="price-list__cost">
+                        2 700
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      60 мин. (все тело)
+                    </span>
+                  </li>
+                </ul>
+                <ul class="price-list__column">
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Общий расслабляющий массаж
+                      </span>
+                      <span class="price-list__cost">
+                        2 000
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      40 мин.
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Общий расслабляющий массаж
+                      </span>
+                      <span class="price-list__cost">
+                        2 500
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      60 мин.
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Расслабляющий массаж 1.5 часа
+                      </span>
+                      <span class="price-list__cost">
+                        3 100
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      Сочетание двух техник классического и расслабляющего массажа
+                    </span>
+                  </li>
+                  <!---->
+                  <li class="price-list__element">
+                    <div class="price-list__element-main">
+                      <span class="price-list__position">
+                        Лимфодренажный массаж
+                      </span>
+                      <span class="price-list__cost">
+                        2000
+                      </span>
+                    </div>
+                    <span class="price-list__element-sup">
+                      40 мин
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </article>
+      <!-- SERVICE END -->
+      
+      <!-- ATMOSPHERE START -->
+     
+
+      
+      <article id="atmosphere" class="atmosphere">
+        <h2 class="atmosphere__title">
+          Атмосфера салона
+        </h2>
+        <div  class="atmosphere__video">
+          <iframe 
+            width="950" 
+            height="555" 
+            src="https://www.youtube.com/embed/6X5ut_fIGB4"
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div>
+        <section class="atmosphere__info-container">
+          <section class="atmosphere__about">
+            <h3 class="atmosphere__about-title">
+              О нас
+            </h3>
+            <div class="atmosphere__about-description">
+              <p class="atmosphere__about-description-paragraph">
+                Добро пожаловать в Салон Красоты!
+              </p>
+              <p class="atmosphere__about-description-paragraph">
+                Место, где, прежде всего, ценится натуральная красота, которая существует вне времени и моды.
+              </p>
+              <p class="atmosphere__about-description-paragraph">
+                Это пространство для современных и уверенных в себе, для тех, кто ценит свободу самовыражения и свободу творчества.
+              </p>
+              <p class="atmosphere__about-description-paragraph">
+                Салон Красоты создан для тех, кто привык к качественному обслуживанию по доступным ценам в кругу таких же, как ты.
+              </p>
+            </div>
+          </section>
+          <ul class="atmosphere__other">
+            <!---->
+             <li class="atmosphere__other-part">
+              <div class="atmosphere__other-image">
+                <img src="public/img/materials.png">
+              </div>
+              <h4 class="atmosphere__other-title">
+                Косметолог
+              </h4>
+              <p class="atmosphere__other-description">
+               Добрый волшебник, который щедро дарит людям красоту, хорошее настроение, отличное самочувствие, успех и счастье.
+              </p>
+            </li>
+            <!---->
+           <li class="atmosphere__other-part">
+              <div class="atmosphere__other-image">
+                <img src="public/img/masters.png">
+              </div>
+              <h4 class="atmosphere__other-title">
+                Массажист
+              </h4>
+              <p class="atmosphere__other-description">
+               Иногда самая срочная и важная вещь, которую надо сделать, — это хорошенько отдохнуть.
+              </p>
+            </li>
+            <!---->
+ <li class="atmosphere__other-part">
+              <div class="atmosphere__other-image">
+                <img src="public/img/interrer.png">
+              </div>
+              <h4 class="atmosphere__other-title">
+                Мастер маникюра
+              </h4>
+              <p class="atmosphere__other-description">
+                Это пространство для современных и уверенных в себе, для тех, кто ценит свободу самовыражения и свободу творчества.
+              </p>
+            </li>
+
+
+
+           
+            <!---->
+
+           
+
+            <!---->
+          </ul>
+        </section>
+      </article>
+      <!-- ATMOSPHERE END -->
+
+      <!-- WORKS START -->
+      <article id="works" class="works">
+        <div class="works__grid-cell works__meta" style="grid-area: a">
+          <h4 class="works__meta-title">
+            Наши работы
+          </h4>
+          <img
+          src="public/img/logo.png"
+          class="works__meta-img"
+        />
+      
+        
+        </div>
+        <div class="works__grid-cell" style="grid-area: b" >
+          <div class="works__gallery-image">
+            <img src="public/img/ex3.jpg">
+          </div>
+        </div>
+        <div class="works__grid-cell" style="grid-area: c">
+          <div class="works__gallery-image">
+            <img src="public/img/ex2.jpg">
+          </div>
+        </div>
+        <div class="works__grid-cell" style="grid-area: d">
+          <div class="works__gallery-image">
+            <img src="public/img/ex1.jpg">
+          </div>
+        </div>
+        <div class="works__grid-cell" style="grid-area: e">
+          <div class="works__gallery-image">
+            <img src="public/img/ex5.jpg">
+          </div>
+        </div>
+        <div class="works__grid-cell" style="grid-area: f">
+          <div class="works__gallery-image">
+            <img src="public/img/ex4.jpg">
+          </div>
+        </div>
+      </article>
+      <!-- WORKS END -->
+
+      <!-- INVITATION START -->
+      <article class="invitation">
+        <h2 class="invitation__title">
+          Запишитесь на первый прием
+        </h2>
+
+
+
+        <div class="banner__action-button-container">
+         
+        
+
+        <a class="invitation__button" href="#form-section">
+          Записаться
+        </a>
+
+      </div>
+
+
+      </article>
+      <!-- INVITATION END -->
+
+      <!-- FORM START -->
+      <article id="form-section" class="form">
+        <section class="form__info">
+          <h2 class="form__title">
+            Хотите записаться?
+          </h2>
+          <p class="form__description">
+            Если у вас остались вопросы, на которые мы сможем
+            вам ответить в процессе разговора - напишите нам. 
+            Мы открыты для диалога!
+          </p>
+          <div class="form__contacts">
+            <h3 class="form__contacts-title">
+              Наши контакты
+            </h3>
+            <ul class="form__contacts-grid">
+              <li class="form__contact-part">
+                <span class="form__contact-content">
+                  Адрес: Садовая ул., 31, Аксай
+                </span>
+              </li>
+              
+              <li class="form__contact-part">
+                <span class="form__contact-content">
+                  Телефон: +7 (961) 285-65-84
+                </span>
+              </li>
+             
+              <li class="form__contact-part">
+                <span class="form__contact-content">
+                  e-mail: trio777@mail.ru
+                </span>
+              </li>
+              
+            </ul>
+          </div>
+        </section>
+        <form id="form" class="form__tag">
+          <input class="form__field" type="text" name="name" placeholder="Ваше имя">
+          <input class="form__field" type="text" name="email" placeholder="Ваш e-mail">
+          <textarea class="form__teaxtarea" rows="4" name="message" placeholder="Сообщение"></textarea>
+          <input class="form__send" type="submit" value="Отправить"/>
+        </form>
+      </article>
+      <!-- FORM END -->
+
+      <!-- INSTAGRAM START-->
+      <article class="instagram">
+        <h2 class="instagram__title">
+          Наш Instagram
+        </h2>
+        <a href="https://www.instagram.com/trio_aksay_/" class="instagram__galery" >
+          
+          <div><img class="instagram__galery" src="https://sun9-26.userapi.com/impg/M1VTe0uwzaDHN2t0jQz7vwn-IdtbSA6Exu3Gag/XW31BMKZQl8.jpg?size=400x400&quality=96&sign=c4a76295b63ff77b55e663046b3f2b2c&type=album"></div>
+          <div><img class="instagram__galery" src="https://sun9-8.userapi.com/impg/ZKRdU26Mp4qadUFpUSjjCdM3euB7oVYMOizrtg/Aii-lqxeqtE.jpg?size=564x564&quality=96&sign=486bb1fefc450e82531a0f0adda623f5&type=album"></div>
+          <div><img class="instagram__galery" src="https://sun9-75.userapi.com/impg/_EIIRL_rKqymAoIypRhS1fxsQY9krE3SSw6kAQ/wlU_AFQaj54.jpg?size=564x593&quality=96&sign=308501befe4560b91f522692d382572f&type=album"></div>
+          <div><img class="instagram__galery" src="https://sun9-40.userapi.com/impg/8ZKbhySJ5Cj42sitIm4TSdFp4geLJIGxOk8gaA/CYo61-Xao9s.jpg?size=564x564&quality=96&sign=cb487cf66197c79107030f377a6c30ee&type=album"></div>
+        </a>
+        
+      </article>
+      <!-- INSTAGRAM END-->
+
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <span class="footer__copyright">
+        Copyright (c) 2021 Салон красоты ТРИО
+      </span>
+      
+
+
+
+
+    </footer>
+    <!-- FOOTER END -->
+
+	</body>
+</html>
