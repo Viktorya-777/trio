@@ -1,0 +1,211 @@
+@media (max-width: 1200px) {
+  .navigation__link {
+    padding: 1px 3px;
+    margin: 10px 24px;
+  }
+
+.navigation__list {
+  margin: 0;
+}
+.navigation__element--active {
+  padding: 1px;
+}
+
+.header__logo {
+  height: 150px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+}
+
+      .banner {
+        width: 1000px;
+    }
+
+      .banner__action-button {
+      
+        padding: 10px 15px;
+        margin: 1px 5px;
+        border-radius: 10px;
+        font-size: 200%;  
+      }
+      .banner__action-button-container {
+        padding: 10px;
+      }
+
+      .service__tabs{
+        width: 800px;
+      }
+      
+      .service__title{
+        width: 1050px;
+        
+        padding-left: 20px;
+        
+      }
+    .price-list__column {
+      
+      padding-left: 50px;
+      padding-right: 8px;
+  }
+
+      .atmosphere {
+        padding-top: 150px;
+        padding-left: 10px;
+      padding-right: 58px;
+
+        width: 995px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+
+    .atmosphere__info-container {
+      padding-top: 40px;
+      display: flex;
+      width: 900px;
+  }
+  .instagram__title{
+    padding-left: 100px;
+  
+  }
+
+  .works {
+    width: 950px;
+    padding-right: 1px;
+    padding-left: 60px;        
+    }
+
+    .invitation {
+      width: 1030px;
+    }
+    .form {
+      padding-left: 35px; 
+
+}
+.instagram__galery {
+  width: 980px;
+  padding-right: 10px;
+  padding-left: 23px; 
+
+}
+.footer{
+  padding-left: 180px; 
+}
+ 
+}
+    @media (max-width: 992px) {
+
+      .banner {
+        width: 1050px;
+    }
+
+      .banner__action-button {
+      
+        padding: 10px 15px;
+        margin: 1px 5px;
+        border-radius: 10px;
+        font-size: 200%;  
+      }
+      .banner__action-button-container {
+        padding: 10px;
+      }
+
+        .service-card__title {
+          font-size: 20px;
+          line-height: 1px;
+      }
+      .service__tabs {
+        padding-left: 50px;
+        padding-right: 1px;
+    }
+    .price-list__column {
+      
+      padding-left: 50px;
+      padding-right: 8px;
+  }
+
+      .atmosphere {
+        padding-left: 20px;
+    }
+
+    .atmosphere__info-container {
+      padding-top: 40px;
+      display: flex;
+      width: 900px;
+  }
+
+  .works {
+    padding-left: 50px;        
+    }
+
+    .invitation {
+      width: 1050px;
+    }
+    .form {
+      padding-left: 35px; 
+
+}
+.instagram__galery {
+  width: 980px;
+  padding-right: 10px;
+  padding-left: 23px; 
+
+}
+.footer{
+  width: 480px;
+  padding-left: 320px; 
+}
+
+.instagram__title{
+  padding-left: 250px;
+
+}
+.instagram {
+  padding-top: 0;
+}
+
+.price-list {
+  width: 1000px;
+}
+
+.service__tabs{
+  width: 1000px;
+}
+
+.service__title{
+  width: 1050px;
+  
+  padding-left: 20px;
+  
+}
+
+
+
+  }
+
+    @media (max-width: 768px) {
+      .footer {   
+         width: 550px;
+    }
+
+    .instagram__title{
+      width: 550px;
+    }
+   
+    .form {
+      width: 870px;
+      padding-right: 1px;
+      padding-left: 85px; 
+}
+
+.atmosphere {
+  padding-left: 35px;
+
+
+}
+
+    }
+

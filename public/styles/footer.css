@@ -20,3 +20,37 @@
   border-image: linear-gradient(20deg, #dbbba2 38%, #000000 65%);
   border-image-slice: 1;
 }
+
+
+.topbutton {
+  text-decoration: none;
+  display: inline-block;
+ 
+  
+  border-radius: 1000px;
+  box-shadow: 0 0 40px 40px transparent inset, 0 0 0 0 #dbbba2;
+  font-family: 'Montserrat', sans-serif;
+  
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #c9ac96;
+  transition: .15s ease-in-out;
+  
+    width:100px;
+    
+    cursor:pointer;
+    text-align:center;
+    padding:1px;
+    position:fixed;
+    bottom:5px;
+    right:5px;
+    
+    font-size:45px;
+   
+  
+
+  }
+  .topbutton:hover {
+    box-shadow: 0 0 10px 0 #dbbba2 inset, 0 0 10px 4px #be9c82;
+    color: #c9ac96;
+  }
