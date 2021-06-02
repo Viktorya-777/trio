@@ -1,0 +1,195 @@
+/* Header и навигация */
+
+@media (min-width: 1251px ) and (max-width: 1450px) {
+  .navigation__link {
+    margin: 0px 10px;
+  }
+}
+
+@media  (max-width: 1250px) {
+  .header__logo{
+    height: 130px;
+  }
+
+  .header__logo-container{
+    padding: 10px 10px 10px;
+  }
+
+  .navigation__link {
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .navigation__link:hover{
+    box-shadow: none;
+  }
+
+  .navigation__element--active{
+    border: 0;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 810px){
+  .header{
+    flex-direction: column;
+  }
+  .navigation__list{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header__navigation{
+    width: 100vw;
+  }
+  .header{
+    padding-bottom: 30px;
+  }
+}
+
+/* Услуги и цены */
+
+@media  (max-width: 1250px) {
+  .service-card__title{
+    font-size: 18px;
+    padding: 0px;
+  }
+  .service-card__info{
+    padding: 10px;
+  }
+  .service-card__info-container{
+    padding: 5px;
+  }
+}
+
+@media  (max-width: 850px) {
+  .service-card__info-container{
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .service-card__info{
+    box-sizing: border-box;
+    height: 100%;
+  }
+  .service-card__info-container{
+    min-width: 194px;
+  }
+  .service__tabs{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .service__tab{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media  (max-width: 580px) {
+  .service__tabs{
+    flex-direction: column;
+  }
+
+  .service-card{
+    background: none;
+    padding: 0;
+    height: auto;
+  }
+
+  .service-card__info{
+    height: auto !important;
+  }
+  .service-card__info-container{
+    height: auto !important;
+    position: static;
+  }
+
+
+}
+
+@media  (max-width: 700px) {
+  .price-list{
+    flex-direction: column;
+    padding: 0;
+  }
+  .price-list__column{
+    padding: 10px;
+  }
+  .price-list__position{
+    font-size: 12px;
+  }
+  .price-list__cost{
+    font-size: 12px;
+    min-width: 70px;
+  }
+  .price-list__element-sup{
+    font-size: 12px;
+  }
+}
+
+/* Атмосфера салона + О нас */
+
+@media  (max-width: 1024px) {
+  .atmosphere__video > iframe{
+    width: 100vw;
+    height: 50vw;
+  }
+
+  .atmosphere__info-container{
+    width: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .atmosphere__other{
+    padding: 0;
+  }
+}
+
+@media  (max-width: 500px) {
+  .atmosphere__other{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Наши работы */
+
+@media  (max-width: 1000px) {
+  .works__meta-img{
+    display: none;
+  }
+  .works{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .works__grid-cell{
+    width: 50%;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 750px) {
+  .invitation{
+    display: none;
+  }
+}
+
+/* Форма записи */
+
+@media (max-width: 1024px) {
+  .form{
+    width: auto;
+    flex-direction: column;
+  }
+}
+
+/* Инстаграм */
+@media (max-width: 750px) {
+  .instagram__galery{
+    display: flex;
+    flex-direction: column;
+  }
+}
