@@ -27,7 +27,6 @@ function deleteRow(id){
                                                                                                                     
 function runAdmin(){
   
-    /* YOU CONFIG */
     var firebaseConfig = {
     apiKey: "AIzaSyD8cdBzG9rci9TBRYT1Ufc_6Og5IW6TLsk",
     authDomain: "trio-2ccea.firebaseapp.com",
