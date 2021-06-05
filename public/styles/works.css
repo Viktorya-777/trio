@@ -10,7 +10,7 @@
   grid-template-rows: repeat(9, 1fr);
   margin: auto;
   grid-gap: 20px;
-  /* Сетка задается шаблоном, буква - соответствует значение стиля картинки в html */
+  
   grid-template-areas: "a a b b b b c c c"  
                        "a a b b b b c c c"
                        "a a b b b b c c c"  
@@ -47,7 +47,7 @@
 }
 
 .works__meta-img {
-  /* height: 50%;     */
+ 
   
   width: 100%;
   
@@ -62,30 +62,29 @@
 }
 
 .works__gallery-image--selected {
-  /* Выбранную картинку нужно фиксировано спозиционировать по центру экрана */
+  
   position: fixed;
-  top: 50%; /* Отступ сверху - 50% высоты окна */
-  left: 50%; /* Отступ слева - 50% ширины экрана */
-  transform: translate(-50%, -50%); /* Далее нужно отступить в обратну сторону на половину ширины и высоты самого блока */
-  padding: 50px; /* Отступы вокруг картинки (что б не на весь экран) */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  padding: 50px; 
   box-sizing: border-box;
-  z-index: 2; /* И выводим её на передний план, чтоб затемненный фон не перекрывал */
+  z-index: 2; 
 }
 
 .works__gallery-image--selected > img {
-  object-fit: contain !important; /* У выбранной картинки переопределяем стратегию заполнения 
-  картинкой блока, !important задает максимальный приоритет */
+  object-fit: contain !important; 
 }
 
 .works__gallery-image--selected:after{
-  /* Крестик реализован через псевдоэлемент after */
-  content: 'x'; /* Сам крестик */
+  
+  content: 'x'; 
   font-size: 35px;
   font-weight: 500;
   border: 2px solid white;
   border-radius: 50%;
   background-color: rgba(0,0,0,.5);
-  /* transform: translate(100%, -100%); */
+ 
   cursor: pointer;
   box-sizing: border-box;
   padding-bottom: 10px;
@@ -94,20 +93,20 @@
   text-align: center;
   display: block;
   position: fixed;
-  /* right: 0; */
-  right: 20px; /* Отображаем в правом верхнем углу страницы с небольшим отступом*/
+  
+  right: 20px; 
   top: 20px;
   color: white;
 }
 
-.works__gallery-image--selected:before { /* Это полупрозрачный затемняющий фон, который видно только у активной картинки*/
-  content: ""; /* Без свойства content элемент не отобразится*/
-  width: 100vw; /* Полная ширина окна */
-  height: 100vh; /* Полная высотка окна */
-  top: 0; /* Без отступов */
+.works__gallery-image--selected:before { 
+  content: ""; 
+  width: 100vw;
+  height: 100vh; 
+  top: 0; 
   left: 0;
   background-color: rgba(0,0,0,.7);
-  z-index: -1; /* Отправляем на задний план */
+  z-index: -1; 
   position: fixed;
 }
 
