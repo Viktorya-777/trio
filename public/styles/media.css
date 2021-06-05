@@ -1,4 +1,4 @@
-/* Header и навигация */
+
 
 @media (min-width: 1251px ) and (max-width: 1450px) {
   .navigation__link {
@@ -46,7 +46,7 @@
   }
 }
 
-/* Услуги и цены */
+
 
 @media  (max-width: 1250px) {
   .service-card__title{
@@ -125,7 +125,7 @@
   }
 }
 
-/* Атмосфера салона + О нас */
+
 
 @media  (max-width: 1024px) {
   .atmosphere__video > iframe{
@@ -152,7 +152,7 @@
   }
 }
 
-/* Наши работы */
+
 
 @media  (max-width: 1000px) {
   .works__meta-img{
@@ -177,7 +177,7 @@
   }
 }
 
-/* Форма записи */
+
 
 @media (max-width: 1024px) {
   .form{
@@ -186,7 +186,7 @@
   }
 }
 
-/* Инстаграм */
+
 @media (max-width: 750px) {
   .instagram__galery{
     display: flex;
