@@ -1,13 +1,13 @@
-// Firestore rule config
 // rules_version = '2';
-// service cloud.firestore {
-//   match /databases/{database}/documents {
-//     match /registrations/{registration} {
-//       allow create
-//       allow read, delete: if request.auth.token.email == '<email>'
-//     }
-//   }
+ //service cloud.firestore {
+  // match /databases/{database}/documents {
+   // match /registrations/{registration} {
+     //  allow create
+     // allow read, delete: if request.auth.token.email == 'trio777@mail.ru'
+   // } 
+   // }
 // }
+
              
 let db
 
